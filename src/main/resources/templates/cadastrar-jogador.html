@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+</head>
+
+<body>
+
+    <form th:object="${cadastro}" th:action="@{cadastro-jogador}" method="post">
+
+        <label for="nome">Digite seu nome para cadastrar</label>
+        <input id="nome" type="text" th:field="*{nome}">
+
+        <label for="nick">Digite seu nick para cadastrar</label>
+        <input id="nick" type="text" th:field="*{nick}">
+
+        <label for="jogo">Digite seu jogo favorito</label>
+        <input id="jogo" type="text" th:field="*{jogo}">
+
+        <input type="submit" value="Cadastrar">
+
+    </form>
+
+</body>
+
+</html>
